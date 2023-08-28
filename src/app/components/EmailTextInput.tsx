@@ -11,7 +11,7 @@ export default function EmailTextInput() {
           type="email"
           id="email-input"
           placeholder="email@company.com"
-          className="w-full focus:outline-none"
+          className="w-full focus:outline-none font-ubuntu"
         />
       </div>
     </div>
