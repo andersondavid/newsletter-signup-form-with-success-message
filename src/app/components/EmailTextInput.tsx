@@ -6,7 +6,7 @@ export default function EmailTextInput() {
       <label htmlFor="email-input" className="block font-ubuntu text-sm">
         Email address
       </label>
-      <div className="border-2 solid border-grey rounded-lg p-4 mt-2">
+      <div className="border-[1px] solid border-grey rounded-lg p-4 mt-2">
         <input
           type="email"
           id="email-input"
