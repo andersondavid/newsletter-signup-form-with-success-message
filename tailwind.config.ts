@@ -16,6 +16,7 @@ const config: Config = {
     },
     fontFamily: {
       ubuntu: ["Ubuntu", "sans-serif"],
+      ubuntuBold: ["Ubuntu Bold", "sans-serif"],
     },
     extend: {},
   },
