@@ -1,5 +1,6 @@
 import Image from "next/image";
 import EmailTextInput from "./components/EmailTextInput";
+import SubscribeButton from "./components/SubscribeButton";
 
 export default function Home() {
   return (
@@ -57,6 +58,9 @@ export default function Home() {
       </div>
       <div className="px-6 pt-6">
         <EmailTextInput />
+      </div>
+      <div className="px-6 pt-6">
+        <SubscribeButton />
       </div>
     </main>
   );
