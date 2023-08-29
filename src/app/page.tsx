@@ -1,6 +1,6 @@
 import Image from "next/image";
 import EmailTextInput from "./components/EmailTextInput";
-import SubscribeButton from "./components/SubscribeButton";
+import BigButton from "./components/BigButton";
 
 export default function Home() {
   return (
@@ -65,7 +65,7 @@ export default function Home() {
           <EmailTextInput />
         </div>
         <div className="p-6">
-          <SubscribeButton />
+          <BigButton text="Subscribe to monthly newsletter"/>
         </div>
       </div>
       <div className="w-full max-w-sm md:block hidden m-6">
