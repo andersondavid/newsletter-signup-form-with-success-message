@@ -1,9 +1,13 @@
 import React from "react";
 
-export default function SubscribeButton() {
+type PropTypes = {
+  text: string
+}
+
+export default function BigButton({ text }: PropTypes) {
   return (
     <button className="rounded-lg p-4 bg-darkslategrey w-full text-white font-ubuntuBold">
-      Subscribe to monthly newsletter
+      {text}
     </button>
   );
 }
