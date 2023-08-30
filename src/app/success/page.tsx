@@ -37,7 +37,7 @@ export default function Success() {
         </p>
       </div>
       <div className="mt-auto mb-4 md:mt-8 md:mb-12">
-        <BigButton text="Dismiss message" onClick={backToHome}/>
+        <BigButton text="Dismiss message" onClick={backToHome} active/>
       </div>
     </div>
   );

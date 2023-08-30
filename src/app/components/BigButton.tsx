@@ -2,14 +2,17 @@ import React from "react";
 
 type PropTypes = {
   text: string;
-  onClick: () => void
+  active?: boolean;
+  onClick: () => void;
 };
 
-export default function BigButton({ text, ...props }: PropTypes) {
+export default function BigButton({ text, active, onClick }: PropTypes) {
   return (
     <button
-      {...props}
-      className="rounded-lg p-4 bg-darkslategrey w-full text-white font-ubuntuBold"
+      onClick={onClick}
+      className={`${
+        active ? "hover:bg-gradient-to-r hover:shadow-tomato" : ""
+      } transition-all  from-pink to-orange shadow-2xl bg-darkslategrey rounded-lg p-4 w-full text-white font-ubuntuBold`}
     >
       {text}
     </button>

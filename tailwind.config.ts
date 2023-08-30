@@ -9,6 +9,8 @@ const config: Config = {
   theme: {
     colors: {
       tomato: "hsl(4, 100%, 67%)",
+      orange: "hsl(13, 100%, 62%)",
+      pink: "hsl(347, 100%, 66%)",
       darkslategrey: "hsl(234, 29%, 20%)",
       charcoalgrey: "hsl(235, 18%, 26%)",
       grey: "hsl(231, 7%, 60%)",

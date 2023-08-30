@@ -107,6 +107,7 @@ export default function Home() {
           <BigButton
             text="Subscribe to monthly newsletter"
             onClick={subscribing}
+            active={inputError == null && email != ""}
           />
         </div>
       </div>
