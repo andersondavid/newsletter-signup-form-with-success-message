@@ -3,11 +3,16 @@
 import Image from "next/image";
 import React from "react";
 import BigButton from "../components/BigButton";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Success() {
+  const router = useRouter()
   const searchParams = useSearchParams();
   const email = searchParams.get("email");
+
+  const backToHome = () => {
+    router.push('/')
+  }
 
   return (
     <div className="px-6 h-screen md:h-min flex flex-col md:px-12 md:max-w-[29em]">
@@ -32,7 +37,7 @@ export default function Success() {
         </p>
       </div>
       <div className="mt-auto mb-4 md:mt-8 md:mb-12">
-        <BigButton text="Dismiss message" />
+        <BigButton text="Dismiss message" onClick={backToHome}/>
       </div>
     </div>
   );

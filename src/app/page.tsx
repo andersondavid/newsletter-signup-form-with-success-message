@@ -4,22 +4,29 @@ import Image from "next/image";
 import EmailTextInput from "./components/EmailTextInput";
 import BigButton from "./components/BigButton";
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import Router from "next/router";
 import { z, ZodIssue } from "zod";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [email, setEmail] = useState("");
   const [inputError, setInputError] = useState<ZodIssue | null>();
-  const emailValidator = z.string().email({ message: "Email invalido" });
+  const emailValidator = z.string().email();
+  const router = useRouter();
 
   useEffect(() => {
     const validation = emailValidator.safeParse(email);
-    if (validation.success) {
+    if (validation.success || email == "") {
       setInputError(null);
     } else {
       setInputError(validation.error?.issues[0]);
     }
-  }, [email, emailValidator]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [email]);
+
+  const subscribing = () => {
+    router.push("/success?email=" + email);
+  };
 
   return (
     <main className="md:flex">
@@ -86,12 +93,17 @@ export default function Home() {
           </div>
         </div>
         <div className="px-6 pt-6 md:pt-8">
-          <EmailTextInput email={email} setEmail={setEmail} issue={inputError}/>
+          <EmailTextInput
+            email={email}
+            setEmail={setEmail}
+            issue={inputError}
+          />
         </div>
         <div className="p-6">
-          <Link href={{ pathname: "/success", query: { email } }}>
-            <BigButton text="Subscribe to monthly newsletter" />
-          </Link>
+          <BigButton
+            text="Subscribe to monthly newsletter"
+            onClick={subscribing}
+          />
         </div>
       </div>
       <div className="w-full max-w-sm md:block hidden m-6">
