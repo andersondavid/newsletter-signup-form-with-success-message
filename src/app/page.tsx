@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import EmailTextInput from "./components/EmailTextInput";
-import BigButton from "./components/BigButton";
 import { useState, useEffect } from "react";
-import Router from "next/router";
 import { z, ZodIssue } from "zod";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+
+import EmailTextInput from "./components/EmailTextInput";
+import BigButton from "./components/BigButton";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -25,7 +25,11 @@ export default function Home() {
   }, [email]);
 
   const subscribing = () => {
-    router.push("/success?email=" + email);
+    if (inputError == null && email != "") {
+      router.push("/success?email=" + email);
+    } else {
+      alert("Valid email required")
+    }
   };
 
   return (
