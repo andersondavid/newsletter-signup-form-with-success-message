@@ -3,17 +3,23 @@
 import Image from "next/image";
 import EmailTextInput from "./components/EmailTextInput";
 import BigButton from "./components/BigButton";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { z, ZodIssue } from "zod";
 
 export default function Home() {
   const [email, setEmail] = useState("");
-  const router = useRouter();
+  const [inputError, setInputError] = useState<ZodIssue | null>();
+  const emailValidator = z.string().email({ message: "Email invalido" });
 
-  const subscribing = () => {
-    router.push("/success", {});
-  };
+  useEffect(() => {
+    const validation = emailValidator.safeParse(email);
+    if (validation.success) {
+      setInputError(null);
+    } else {
+      setInputError(validation.error?.issues[0]);
+    }
+  }, [email, emailValidator]);
 
   return (
     <main className="md:flex">
@@ -80,7 +86,7 @@ export default function Home() {
           </div>
         </div>
         <div className="px-6 pt-6 md:pt-8">
-          <EmailTextInput email={email} setEmail={setEmail} />
+          <EmailTextInput email={email} setEmail={setEmail} issue={inputError}/>
         </div>
         <div className="p-6">
           <Link href={{ pathname: "/success", query: { email } }}>
