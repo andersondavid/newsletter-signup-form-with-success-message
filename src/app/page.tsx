@@ -42,7 +42,7 @@ export default function Home() {
             height={100}
             style={{ height: "auto", width: "100%" }}
             fill={false}
-            src="/assets/images/illustration-sign-up-mobile.svg"
+            src="https://raw.githubusercontent.com/andersondavid/newsletter-signup-form-with-success-message/master/public/assets/images/illustration-sign-up-mobile.svg"
           />
         </div>
         <div className="px-6">
@@ -57,7 +57,7 @@ export default function Home() {
           <div className="flex mt-3 md:mt-3">
             <picture>
               <Image
-                src="../assets/images/icon-list.svg"
+                src="https://raw.githubusercontent.com/andersondavid/newsletter-signup-form-with-success-message/master/public/assets/images/icon-list.svg"
                 width="22"
                 height="22"
                 alt="icon list"
@@ -71,7 +71,7 @@ export default function Home() {
           <div className="flex mt-3 md:mt-3">
             <picture>
               <Image
-                src="../assets/images/icon-list.svg"
+                src="https://raw.githubusercontent.com/andersondavid/newsletter-signup-form-with-success-message/master/public/assets/images/icon-list.svg"
                 width="22"
                 height="22"
                 alt="icon list"
@@ -85,7 +85,7 @@ export default function Home() {
           <div className="flex mt-3 md:mt-3">
             <picture>
               <Image
-                src="../assets/images/icon-list.svg"
+                src="https://raw.githubusercontent.com/andersondavid/newsletter-signup-form-with-success-message/master/public/assets/images/icon-list.svg"
                 width="22"
                 height="22"
                 alt="icon list"
@@ -118,7 +118,7 @@ export default function Home() {
           height={100}
           style={{ height: "auto", width: "100%" }}
           fill={false}
-          src="/assets/images/illustration-sign-up-desktop.svg"
+          src="https://raw.githubusercontent.com/andersondavid/newsletter-signup-form-with-success-message/master/public/assets/images/illustration-sign-up-desktop.svg"
         />
       </div>
     </main>

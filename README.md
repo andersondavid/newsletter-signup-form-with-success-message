@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/andersondavid/newsletter-signup-form-with-success-message)
-- Live Site URL: [Hosted on Github Pages](https://your-live-site-url.com)
+- Live Site URL: [Hosted on Github Pages](https://andersondavid.github.io/newsletter-signup-form-with-success-message/)
 
 ## My process
 

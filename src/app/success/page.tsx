@@ -22,7 +22,7 @@ export default function Success() {
           width={64}
           height={64}
           fill={false}
-          src="/assets/images/icon-success.svg"
+          src="https://raw.githubusercontent.com/andersondavid/newsletter-signup-form-with-success-message/master/public/assets/images/icon-success.svg"
         />
       </div>
       <div className="mt-10">
